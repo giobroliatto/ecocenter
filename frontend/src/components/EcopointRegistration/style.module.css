@@ -1,35 +1,43 @@
 .input_registration {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-      sans-serif;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 14px
+    font-size: 14px;
 }
 
 .title1, .title2, .title3 {
-    color: #f7fff8;
+    color: #ffffff;
     text-align: center;
 }
 
 .title1 {
-    font-size: 40px;
+    font-size: 34px;
+    font-weight: 800;
+    letter-spacing: -0.4px;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 28px;
 }
 
 .title2 {
-    margin-top: 0px;
-    margin-bottom: 0px;
-    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.4;
 }
 
 .title3 {
-    margin-top: 0px;
-    margin-bottom: 30px;
-    font-size: 28px;
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 24px;
+    font-weight: 800;
 }
 
 .paragraph {
     text-align: justify;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.6;
+    font-size: 14px;
 }
 
 .wrapper_all {
@@ -38,126 +46,116 @@
 }
 
 .wrapper {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 60%;
-    position: relative;
-    border-radius: 30px;
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.18);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: min(820px, 94vw);
+    border-radius: 28px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
 .card {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 30px;
-    margin-bottom: 20px; 
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 28px;
+    margin-bottom: 18px;
 }
 
 .form_group {
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
 }
 
 label {
     display: block;
     font-weight: 600;
-    color: #f7fff8;
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 7px;
+    font-size: 14px;
 }
 
 .input_registration, select {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
-    border-radius: 10px;
-    background-color: #f7fff8;
-    transition: border-color 0.3s; 
+    padding: 11px 14px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.2s, box-shadow 0.2s;
     box-sizing: border-box;
+    font-size: 14px;
+    color: #1a1a1a;
 }
 
 .input_registration:focus, select:focus {
-    border-color: #3282b8;
+    border-color: #1565a8;
+    box-shadow: 0 0 0 3px rgba(21, 101, 168, 0.15);
     outline: none;
 }
 
 .radio_group {
     display: flex;
+    gap: 20px;
 }
 
 .radio_group label {
     display: inline-flex;
-    margin-right: 15px;
+    align-items: center;
+    font-weight: 500;
 }
 
 .radio_group .input_registration[type="radio"] {
+    width: auto;
     margin-right: 8px;
-}
-
-.radio_group label span.required {
-    margin-left: 5px;
 }
 
 .button_wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
+    gap: 10px;
+    margin-top: 8px;
 }
 
 .button {
-    background-color: rgb(249, 255, 248);
-    color: #000000;
+    background: rgba(255, 255, 255, 0.92);
+    color: #1565a8;
     font-weight: 700;
-    font-size: 16px;
-    width: 30%;
-    padding: 12px 24px; 
+    font-size: 15px;
+    width: min(260px, 100%);
+    padding: 13px 24px;
     border: none;
-    border-radius: 12px;
-    cursor: pointer; 
-    transition: background-color 0.3s;
-    margin-bottom: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+    font-family: 'Inter', sans-serif;
 }
 
 .button:hover {
-    background-color: #89c273; 
+    background: #ffffff;
+    transform: translateY(-1px);
 }
 
 .button_remove {
-    background-color: rgb(212, 58, 58);
+    background: rgba(210, 60, 60, 0.85);
     color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .button_remove:hover {
-    background-color: rgb(133, 43, 43);
+    background: rgba(180, 30, 30, 0.95);
 }
 
 .required {
-    color: rgb(255, 0, 0);
-    font-size: 16px;
-    font-weight: bolder;
+    color: #ff6b6b;
+    font-size: 15px;
+    font-weight: 700;
 }
 
 .disabled {
     background-color: rgb(189, 189, 189);
     border-color: #858585;
-}
-
-/* customSelectStyles */
-.Select-option {
-    color: black;
-}
-
-.Select-multi-value__remove {
-    color: red;
-}
-
-.Select-multi-value {
-    background-color: lightgrey;
-}
-
-.Select-multi-value__remove:hover {
-    background-color: transparent;
-}
-
-.Select-multi-value__remove:hover svg {
-    color: darkred;
 }
 
 /* MODAL */
@@ -167,88 +165,99 @@ label {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 .modal {
-    background: linear-gradient(to bottom right, #4c809e, #396427);
-    padding: 20px;
-    border-radius: 10px;
+    background: linear-gradient(135deg, #0d3b6e 0%, #1565a8 50%, #1a5c1a 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 32px;
+    border-radius: 20px;
     max-width: 500px;
-    width: 100%;
+    width: 90vw;
     position: relative;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
 }
 
 .modal_title {
-    color: #f7fff8;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
     margin-bottom: 20px;
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .modal_close:hover {
-    color: #a5a5a5;
+    color: rgba(255, 255, 255, 0.7);
 }
 
 .remove_ecopoint_input {
-    border-radius: 10px;
-    border: none;
-    background-color: #f7fff8;
-    padding: 6px;
-    padding-left: 10px;
+    border-radius: 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.25);
+    background-color: rgba(255, 255, 255, 0.12);
+    color: white;
+    padding: 10px 14px;
+    font-size: 14px;
     width: 100%;
     box-sizing: border-box;
-    margin-bottom: 20px;
-    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+.remove_ecopoint_input::placeholder {
+    color: rgba(255, 255, 255, 0.45);
 }
 
 .button_remove_modal {
-    background-color: rgb(212, 58, 58);
+    background: rgba(210, 60, 60, 0.85);
     color: #ffffff;
     font-weight: 700;
     font-size: 15px;
     width: 50%;
-    padding: 10px; 
+    padding: 11px;
     border: none;
-    border-radius: 12px;
-    cursor: pointer; 
-    transition: background-color 0.3s;
-    margin-bottom: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
 }
 
 .button_remove_modal:hover {
-    background-color: rgb(133, 43, 43);
+    background: rgba(180, 30, 30, 0.95);
+    transform: translateY(-1px);
 }
 
 .button_cancel_modal {
-    background-color: rgb(249, 255, 248);
-    color: #000000;
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.85);
     font-weight: 700;
     font-size: 15px;
     width: 50%;
-    padding: 10px; 
-    border: none;
-    border-radius: 12px;
-    cursor: pointer; 
-    transition: background-color 0.3s;
-    margin-bottom: 10px;
+    padding: 11px;
+    border: 1.5px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Inter', sans-serif;
 }
 
 .button_cancel_modal:hover {
-    background-color: #cfcfcf;
+    background: rgba(255, 255, 255, 0.22);
+    color: #ffffff;
 }
 
 @media screen and (max-width: 1200px) {
     .wrapper {
-        width: 70%;
+        width: 80%;
     }
 }
 
 @media screen and (max-width: 768px) {
     .wrapper {
-        width: 80%;
+        width: 94vw;
     }
 }

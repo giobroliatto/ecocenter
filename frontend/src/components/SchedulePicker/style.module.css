@@ -1,84 +1,106 @@
 .title {
-    font-size: 22px;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-align: center;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 .weekday {
-    display: inline-flex;
+    display: flex;
     width: 100%;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    line-height: 1;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 14px;
+    font-weight: 500;
 }
 
 .weekday_checkbox {
-    width: 100px;
-    margin-left: -25px;
-    margin-right: -15px;
+    width: 16px;
+    height: 16px;
+    margin: 0;
+    flex-shrink: 0;
+    accent-color: #6bee85;
+    cursor: pointer;
 }
 
 .schedule_section {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 10px;
-    padding-bottom: 5px;
-    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 16px;
+    padding: 14px 18px;
     margin-bottom: 10px;
 }
 
 .input_schedule {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #cccccc;
+    padding: 10px 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
     border-radius: 10px;
-    background-color: #f7fff8;
-    transition: border-color 0.3s; 
+    background-color: rgba(255, 255, 255, 0.9);
+    transition: border-color 0.2s;
     box-sizing: border-box;
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+.input_schedule:focus {
+    border-color: #1565a8;
+    outline: none;
 }
 
 .times {
     display: flex;
     margin-bottom: 10px;
     margin-top: 10px;
+    align-items: flex-end;
+    gap: 12px;
 }
 
 .times label {
-    font-size: 14px;
+    font-size: 13px;
     margin-right: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
 }
 
 .times_group {
     width: 25%;
-    margin-right: 30px;
 }
 
 .button_wrapper {
-    margin-top: 32px;
-    margin-left: -10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
 }
 
 .add_button {
     background-color: transparent;
     border: none;
-    font-size: 24px;
-    color: rgb(145, 241, 153);
+    font-size: 22px;
+    color: rgba(107, 238, 130, 0.85);
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.2s, transform 0.15s;
 }
 
 .add_button:hover {
-    color: rgb(44, 190, 56);
+    color: rgb(107, 238, 130);
+    transform: scale(1.15);
 }
 
 .remove_button {
     background-color: transparent;
     border: none;
-    font-size: 24px;
-    margin-top: 2px;
-    color: rgb(243, 95, 95);
+    font-size: 22px;
+    color: rgba(243, 100, 100, 0.8);
     cursor: pointer;
-    transition: color 0.3s;
+    transition: color 0.2s, transform 0.15s;
 }
 
 .remove_button:hover {
-    color: rgb(221, 12, 12);
+    color: rgb(243, 100, 100);
+    transform: scale(1.15);
 }

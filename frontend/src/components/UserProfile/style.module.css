@@ -1,100 +1,124 @@
 .container {
-    width: 350px;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: min(420px, 92vw);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 48px 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    margin: 48px auto;
 }
 
 .containerAuth {
-    width: 350px;
-    background-color: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(10px);
-    padding: 40px;
-    border-radius: 10px;
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin: 0 auto;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    width: min(440px, 92vw);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 48px 40px;
+    border-radius: 24px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    margin: 48px auto;
 }
 
 .title1 {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    font-size: 28px;
+    font-weight: 800;
+    text-align: center;
+    color: #ffffff;
+    margin: 0 0 32px;
+    letter-spacing: -0.3px;
 }
 
 .titleAuth {
     text-align: center;
-    margin-top: 0px;
-    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 32px;
 }
 
-.container .inputField {
+.inputField {
     position: relative;
     width: 100%;
-    height: 50px;
-    margin: 30px auto;
+    height: 52px;
+    margin-bottom: 16px;
 }
 
 .inputField input {
-    width: 90%;
+    width: 100%;
     height: 100%;
-    background-color: transparent;
+    background: rgba(255, 255, 255, 0.1);
     outline: none;
-    border: 2px solid rgba(255, 255, 255, 0.2);
-    border-radius: 40px;
-    font-size: 16px;
+    border: 1.5px solid rgba(255, 255, 255, 0.22);
+    border-radius: 14px;
+    font-size: 15px;
     color: #fff;
-    padding: 20px;
+    padding: 14px 46px 14px 18px;
     box-sizing: border-box;
+    transition: border-color 0.2s, background 0.2s;
+    font-family: 'Inter', sans-serif;
+}
+
+.inputField input:focus {
+    border-color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.16);
 }
 
 .inputField input::placeholder {
-    color: #fff;
+    color: rgba(255, 255, 255, 0.45);
 }
 
 .inputField .icon {
     position: absolute;
     top: 50%;
+    right: 14px;
     transform: translateY(-50%);
-    margin-left: 10px;
+    pointer-events: none;
 }
 
 .iconEmail,
 .iconPassword {
-    color: #e5e6df;
-    font-size: 26px;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 20px;
+}
+
+.groupButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 28px;
 }
 
 .btn {
-    background-color: rgb(249, 255, 248);
-    height: 40px;
-    margin-bottom: 10px;
+    background: rgba(255, 255, 255, 0.92);
+    height: 48px;
     width: 100%;
-    position: relative;
-    color: #000000;
+    color: #1565a8;
     font-weight: 700;
-    font-size: 16px;
+    font-size: 15px;
     border: none;
-    border-radius: 12px;
-    cursor: pointer; 
-    transition: background-color 0.3s;
+    border-radius: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s;
+    font-family: 'Inter', sans-serif;
 }
 
 .btn:hover {
-    background-color: #89c273; 
+    background: #ffffff;
+    transform: translateY(-1px);
+}
+
+.btn:last-child {
+    background: rgba(255, 255, 255, 0.12);
+    color: rgba(255, 255, 255, 0.8);
+    border: 1.5px solid rgba(255, 255, 255, 0.22);
+}
+
+.btn:last-child:hover {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
 }
 
 .hidden {
@@ -104,28 +128,34 @@
 .cardContainer {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 14px;
     width: 100%;
 }
 
 .card {
-    background-color: rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 22px 24px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: all 0.2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .card:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+    border-color: rgba(255, 255, 255, 0.3);
 }
 
 .card h2 {
     margin: 0;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
+    font-weight: 600;
 }
 

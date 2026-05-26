@@ -1,21 +1,32 @@
-.option {
-    font-size: 16px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%;
-    padding: 0 30px;
-    cursor: pointer;
-    color: #3D88A8;
-    transition: color 0.5s;
-    font-weight: bold;
-}
-
 .options {
     display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
 }
 
-.option:hover {
-    color: #a5b14a
+.option {
+    display: flex;
+    align-items: stretch;
+}
+
+.option a {
+    font-size: 21px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-items: center;
+    height: 40px;
+    padding: 0 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #1565a8;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.option a:hover {
+    background-color: rgba(21, 101, 168, 0.08);
+    color: #4a8c1a;
 }

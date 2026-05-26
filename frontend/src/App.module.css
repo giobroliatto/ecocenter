@@ -5,20 +5,19 @@ html, body {
 }
 
 body {
-  background: linear-gradient(to bottom right, #1775ac, #85a329);
-  color: white; 
+  background: linear-gradient(135deg, #0d3b6e 0%, #1565a8 50%, #1e6b25 100%);
+  color: white;
   background-attachment: fixed;
 }
 
-/* Adicione isso ao seu arquivo App.module.css ou ao arquivo CSS global */
 a {
-  color: inherit; /* Herdar a cor do elemento pai */
-  text-decoration: none; /* Remover sublinhado */
+  color: inherit;
+  text-decoration: none;
 }
 
 a:hover {
-  color: inherit; /* Herdar a cor do elemento pai no hover */
-  text-decoration: none; /* Remover sublinhado no hover */
+  color: inherit;
+  text-decoration: none;
 }
 
 .App_container {
@@ -29,5 +28,5 @@ a:hover {
 
 .content {
   flex-grow: 1;
-  margin-bottom: 40px;
+  padding: 32px 20px 60px;
 }

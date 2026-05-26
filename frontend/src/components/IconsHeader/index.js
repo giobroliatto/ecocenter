@@ -29,13 +29,14 @@ function IconsHeader() {
                 {icons.map((item, index) => (
                     <li key={index} className={s.icon}>
                         {item.path === '#' ? (
-                            <FontAwesomeIcon 
-                                icon={item.icon} 
-                                data-tooltip-id={item.tooltipId} 
+                            <span
+                                className={s.logout}
+                                data-tooltip-id={item.tooltipId}
                                 data-tooltip-content={item.tooltipContent}
                                 onClick={handleLogout}
-                                className={s.logout}
-                            />
+                            >
+                                <FontAwesomeIcon icon={item.icon} />
+                            </span>
                         ) : (
                             <Link to={item.path}>
                                 <FontAwesomeIcon 

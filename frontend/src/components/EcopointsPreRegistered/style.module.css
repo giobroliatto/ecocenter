@@ -1,17 +1,21 @@
 .title1 {
     text-align: center;
-    color: #f7fff8;
-    font-weight: 700;
-    font-size: 40px;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 34px;
+    letter-spacing: -0.4px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
 }
 
 .title2 {
     text-align: center;
-    color: #f7fff8;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-size: 22px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
     font-weight: 500;
+    line-height: 1.5;
 }
 
 .tableContainer button {
@@ -28,61 +32,112 @@
 }
 
 .wrapper {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 60%;
-    position: relative;
-    border-radius: 30px;
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: min(760px, 94vw);
+    border-radius: 28px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.ecopoints_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .ecopoint {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 10px;
-    padding-bottom: 5px;
-    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    padding: 14px 18px;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    margin-bottom: 15px;
+    align-items: center;
+    transition: background 0.2s;
+}
+
+.ecopoint:hover {
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.ecopoint label {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
+    flex: 1;
+}
+
+.icon_wrapper {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.icon {
+    font-size: 18px;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.2s, transform 0.15s;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.icon:hover {
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
 }
 
 .btnCloseModal, .btnConfirmModal {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: rgb(249, 255, 248);
-    color: #000000;
     font-weight: 700;
     font-size: 14px;
-    padding: 10px 20px;
+    padding: 11px 20px;
     border: none;
-    border-radius: 20px;
+    border-radius: 14px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    height: 40px;
-    flex-wrap: nowrap;
-    flex: 1; 
-    margin: 0 10px; 
-}
-
-.btnConfirmModal:hover {
-    background-color: #66c469;
-}
-
-.btnCloseModal:hover {
-    background-color: rgb(160, 160, 160);
+    transition: all 0.2s;
+    height: 44px;
+    flex: 1;
+    margin: 0 6px;
+    font-family: 'Inter', sans-serif;
 }
 
 .btnConfirmModal {
-    background-color: #a7eca9;
+    background: rgba(107, 200, 120, 0.9);
+    color: #0d2e14;
+}
+
+.btnConfirmModal:hover {
+    background: rgba(107, 200, 120, 1);
+    transform: translateY(-1px);
+}
+
+.btnCloseModal {
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.85);
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+}
+
+.btnCloseModal:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: #ffffff;
 }
 
 .btnContainer {
     display: flex;
     justify-content: center;
-    align-items: center; 
-    margin-top: 20px;
+    align-items: center;
+    margin-top: 24px;
+}
+
+.container {
+    padding: 0 16px;
 }
 
 .modalOverlay {
@@ -91,11 +146,12 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    backdrop-filter: blur(4px);
 }
 
 .modal {

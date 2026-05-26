@@ -9,7 +9,10 @@ function Logo() {
                 alt='logo' 
                 className={s.logo_img}
             />
-            <p style={{color: '#BAD65C'}}>ECO</p><p>CENTER</p>
+            <span className={s.logo_text}>
+                <span className={s.eco}>ECO</span>
+                <span className={s.center}>CENTER</span>
+            </span>
         </div>
     )
 }

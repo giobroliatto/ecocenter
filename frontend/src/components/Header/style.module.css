@@ -1,7 +1,14 @@
 .App_header {
-    background-color: rgb(249, 255, 248);
-    height: 90px; 
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    height: 68px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    padding: 0 36px;
+    box-shadow: 0 2px 20px rgba(13, 59, 110, 0.15);
+    position: sticky;
+    top: 0;
+    z-index: 100;
 }

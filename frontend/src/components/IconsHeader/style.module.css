@@ -1,20 +1,50 @@
-.icon {
-    padding: 10px;
-    font-size: 24px;
-    display: flex;
-    cursor: pointer;
-    color: #3D88A8;
-    transition: color 0.5s;
-}
-
 .icons {
     display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2px;
 }
 
-.icon:hover {
-    color: #a5b14a
+.icon {
+    display: flex;
+    align-items: stretch;
+}
+
+.icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #1565a8;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.icon a:hover {
+    background-color: rgba(21, 101, 168, 0.08);
+    color: #4a8c1a;
 }
 
 .logout {
-    margin-top: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: #1565a8;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.logout:hover {
+    background-color: rgba(21, 101, 168, 0.08);
+    color: #4a8c1a;
 }

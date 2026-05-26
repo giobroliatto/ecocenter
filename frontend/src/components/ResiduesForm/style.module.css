@@ -1,16 +1,20 @@
 .title1 {
     text-align: center;
-    color: #f7fff8;
-    font-weight: 700;
-    font-size: 40px;
+    color: #ffffff;
+    font-weight: 800;
+    font-size: 34px;
+    letter-spacing: -0.4px;
+    margin-bottom: 8px;
+    text-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
 }
 
 .title2 {
     text-align: center;
-    color: #f7fff8;
-    margin-top: 0px;
-    margin-bottom: 20px;
-    font-size: 24px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 0;
+    margin-bottom: 24px;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .wrapper_all {
@@ -19,63 +23,81 @@
 }
 
 .wrapper {
-    background-color: rgba(0, 0, 0, 0.2);
-    width: 60%;
-    position: relative;
-    border-radius: 30px;
-    padding: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    width: min(760px, 94vw);
+    border-radius: 28px;
+    padding: 28px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
 }
 
 .residue {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 10px;
-    padding-bottom: 5px;
-    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 16px;
+    padding: 12px 18px;
     display: flex;
     justify-content: space-between;
-    align-items: center; 
-    margin-bottom: 15px;
+    align-items: center;
+    margin-bottom: 10px;
+    transition: background 0.2s;
+}
+
+.residue:hover {
+    background: rgba(255, 255, 255, 0.13);
+}
+
+.residue label {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 15px;
 }
 
 .icon_wrapper {
-    display: flex; 
-    justify-content: space-between;
-    margin-left: 20px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
 }
 
 .icon_edit, .icon_remove, .icon_check, .icon_cancel {
-    font-size: 18px;
-    margin-top: -4px;
-    margin-right: 15px;
+    font-size: 17px;
     cursor: pointer;
-    transition: color 0.2s;
-    color: rgb(249, 255, 248);
+    transition: color 0.2s, transform 0.15s;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 6px;
+    border-radius: 8px;
 }
 
 .icon_edit:hover, .icon_remove:hover, .icon_check:hover, .icon_cancel:hover {
-    color: rgb(160, 160, 160);
+    color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.1);
 }
 
 .edit_residue_input {
     flex: 1;
-    border: none;
-    font-size: 16px;
-    border-radius: 20px;
-    padding: 4px;
-    margin-top: -3px;
-    border: 1px solid #cccccc;
-    background-color: #3d3d3d28;
+    font-size: 15px;
+    border-radius: 10px;
+    padding: 6px 12px;
+    border: 1.5px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
     color: white;
-    padding-left: 12px;
-    margin-left: -12px;
+    font-family: 'Inter', sans-serif;
+}
+
+.edit_residue_input:focus {
+    outline: none;
+    border-color: rgba(255, 255, 255, 0.6);
 }
 
 .create_residue_section {
-    background-color: rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 25px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 18px;
+    padding: 22px;
+    margin-bottom: 24px;
 }
 
 .add_residue_form {

@@ -64,8 +64,8 @@ const EcopointsList = () => {
 
     const isOpenNow = (schedules) => {
         const now = new Date();
-        const currentDay = now.getDay(); 
-        const currentTime = `${now.getHours()}:${now.getMinutes()}`.padStart(5, '0'); 
+        const currentDay = now.getDay();
+        const currentTime = `${String(now.getHours()).padStart(2, '0')}:${String(now.getMinutes()).padStart(2, '0')}`;
 
         const formatTime = (time) => {
             const [hours, minutes] = time.split(':').map(Number);
@@ -141,7 +141,7 @@ const EcopointsList = () => {
                                 Nenhum ecoponto encontrado
                             </div>
                         ) : (
-                            filteredEcopoints.map((ecopoint) => {
+        filteredEcopoints.map((ecopoint) => {
                                 const openNow = isOpenNow(ecopoint.schedules);
                                 const userRole = Utils.getRoleFromToken(sessionStorage.getItem('token'));
                                 return (
@@ -166,7 +166,7 @@ const EcopointsList = () => {
                                         </div>
                                         <div className={s.residue_tags}>
                                             {ecopoint.residues.map((residue, index) => (
-                                                <div key={index} className={s.residue_tag}>
+                                                <div key={index} className={`${s.residue_tag} ${selectedResidues.includes(residue.name) ? s.residue_tag_active : ''}`}>
                                                     {residue.name}
                                                 </div>
                                             ))}
