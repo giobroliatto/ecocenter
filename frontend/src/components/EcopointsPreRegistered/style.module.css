@@ -155,69 +155,31 @@
 }
 
 .modal {
-    background: linear-gradient(to bottom right, #4c809e, #396427);
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 700px;
-    width: 100%;
+    background: linear-gradient(135deg, #1a5c1a 0%, #1565a8 50%, #0d3b6e 100%);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 32px;
+    border-radius: 20px;
+    max-width: 680px;
+    width: 90vw;
     position: relative;
-    max-height: 90vh; 
+    max-height: 90vh;
     overflow-y: auto;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.5);
 }
 
 .modalText {
     line-height: 1.8;
-    margin-bottom: 20px; 
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 15px;
 }
 
-.icon_wrapper {
-    display: flex; 
-    justify-content: space-between;
-    margin-left: 20px;
-}
-
-.icon {
-    font-size: 20px;
-    margin-top: -4px;
-    margin-right: 15px;
-    cursor: pointer;
-    transition: color 0.2s;
-    color: rgb(249, 255, 248);
-}
-
-.icon_edit {
-    font-size: 18px;
-    margin-top: -3px;
-    margin-right: 15px;
-    cursor: pointer;
-    transition: color 0.2s;
-    color: rgb(249, 255, 248);
-}
-
-.icon:hover {
-    color: rgb(160, 160, 160);
-}
-
-.loader {
-    border: 16px solid #f3f3f3; 
-    border-top: 16px solid #3498db;
-    border-radius: 50%;
-    width: 120px;
-    height: 120px;
-    animation: spin 2s linear infinite;
-    margin: 50px auto;
-}
-
-@keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
 
 .modal_title {
-    color: #f7fff8;
-    margin-top: 0;
-    text-align: center;
-    font-size: 28px; 
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 0 0 24px;
 }
 
 .modalDetails {
@@ -226,28 +188,39 @@
 }
 
 .modalItem {
-    margin-bottom: 12px; 
-    line-height: 1.6; 
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    font-size: 14px;
 }
 
 .modalSubtitle {
-    margin-top: 12px;
-    font-weight: bold;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 15px;
 }
   
 .modalList {
     list-style-type: none;
     padding-left: 0;
+    margin: 0 0 8px;
 }
   
 .modalListItem {
-    margin-bottom: 4px;
+    margin-bottom: 6px;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 14px;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 8px;
 }
 
 .modalLoading {
     text-align: center;
     font-size: 16px;
-    color: #333;
+    color: rgba(255, 255, 255, 0.7);
     margin-top: 20px;
 }
   

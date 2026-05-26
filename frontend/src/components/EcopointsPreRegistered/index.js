@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import Modal from 'react-modal';
 import style from './style.module.css';
@@ -16,6 +17,7 @@ const EcopointsPreRegistered = () => {
     const [selectedEcopoint, setSelectedEcopoint] = useState(null);
     const [action, setAction] = useState('');
     const [ecopointDetails, setEcopointDetails] = useState(null);
+    const navigate = useNavigate();
 
     const fetchEcopoints = async () => {
         setIsLoading(true);
@@ -152,7 +154,8 @@ const EcopointsPreRegistered = () => {
                                             />
                                             <FontAwesomeIcon
                                                 icon={faPen}
-                                                className={style.icon_edit}
+                                                className={style.icon}
+                                                onClick={() => navigate(`/edit-ecopoint/${ecopoint._id}`)}
                                                 title='Editar'
                                             />
                                             <FontAwesomeIcon
