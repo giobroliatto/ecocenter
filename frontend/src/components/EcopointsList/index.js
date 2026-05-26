@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import axios from 'axios';
 import Modal from 'react-modal';
 import s from './style.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMapMarkerAlt, faTimes, faPen } from '@fortawesome/free-solid-svg-icons';
+import { faMapMarkerAlt, faTimes, faPen, faMagnifyingGlass, faSpinner, faXmark, faWandSparkles } from '@fortawesome/free-solid-svg-icons';
 import { faClock } from '@fortawesome/free-regular-svg-icons';
 import { useNavigate } from 'react-router-dom';
 import Utils from '../Utils/utils';
@@ -16,6 +16,10 @@ const EcopointsList = () => {
     const [residueTypes, setResidueTypes] = useState([]);
     const [showModal, setShowModal] = useState(false);
     const [currentSchedules, setCurrentSchedules] = useState([]);
+    const [aiQuery, setAiQuery] = useState('');
+    const [aiLoading, setAiLoading] = useState(false);
+    const [aiError, setAiError] = useState('');
+    const aiInputRef = useRef(null);
     const navigate = useNavigate();
 
     const handleEditClick = (id) => {
@@ -35,6 +39,36 @@ const EcopointsList = () => {
                 console.error('Erro ao buscar dados:', error);
             });
     }, []);
+
+    const handleAISearch = async () => {
+        const query = aiQuery.trim();
+        if (!query) return;
+        setAiLoading(true);
+        setAiError('');
+        try {
+            const response = await axios.post('http://localhost:3001/ai/suggest-residues', {
+                query,
+                residueTypes,
+            });
+            const matches = response.data.matches;
+            if (matches.length === 0) {
+                setAiError('Nenhum resíduo encontrado para essa descrição.');
+            } else {
+                setSelectedResidues(matches);
+            }
+        } catch (err) {
+            setAiError('Erro ao consultar a IA. Tente novamente.');
+        } finally {
+            setAiLoading(false);
+        }
+    };
+
+    const clearAI = () => {
+        setAiQuery('');
+        setAiError('');
+        setSelectedResidues([]);
+        if (aiInputRef.current) aiInputRef.current.focus();
+    };
 
     const toggleResidue = (residue) => {
         const isSelected = selectedResidues.includes(residue);
@@ -123,6 +157,35 @@ const EcopointsList = () => {
                 <div className={s.wrapper}>
                     <h2 className={s.title2}>Tipos de resíduos</h2>
                     <section className={s.filter_section}>
+                        <div className={s.ai_search_wrapper}>
+                            <div className={s.ai_search_bar}>
+                                <FontAwesomeIcon icon={faMagnifyingGlass} className={s.ai_search_icon} />
+                                <input
+                                    ref={aiInputRef}
+                                    className={s.ai_search_input}
+                                    type="text"
+                                    placeholder="Descreva o que quer descartar... ex: 'televisão velha' ou 'caixas de papelão'"
+                                    value={aiQuery}
+                                    onChange={(e) => setAiQuery(e.target.value)}
+                                    onKeyDown={(e) => e.key === 'Enter' && handleAISearch()}
+                                />
+                                {aiQuery && (
+                                    <button className={s.ai_clear_btn} onClick={clearAI} title="Limpar">
+                                        <FontAwesomeIcon icon={faXmark} />
+                                    </button>
+                                )}
+                                <button
+                                    className={s.ai_search_btn}
+                                    onClick={handleAISearch}
+                                    disabled={aiLoading || !aiQuery.trim()}
+                                >
+                                    {aiLoading
+                                        ? <FontAwesomeIcon icon={faSpinner} spin />
+                                        : <><FontAwesomeIcon icon={faWandSparkles} /> Buscar com IA</>}
+                                </button>
+                            </div>
+                            {aiError && <p className={s.ai_error}>{aiError}</p>}
+                        </div>
                         <div className={s.tags}>
                             {residueTypes.map((type) => (
                                 <div
