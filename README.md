@@ -113,8 +113,8 @@ frontend/src/
 
 ---
 
-## Authors
+## Author
 
-Made by **Giovani Broliatto**, **Eduardo Marcon** and **Julio Bassanesi**.
+**Built by Giovani Broliatto**, with contributions from Eduardo Marcon and Julio Bassanesi, as a team project at UCS. The 2026 redesign and the AI search are my own work.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-giobroliatto-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giobroliatto/)

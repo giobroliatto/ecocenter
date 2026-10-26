@@ -113,8 +113,8 @@ frontend/src/
 
 ---
 
-## Autores
+## Autor
 
-Feito por **Giovani Broliatto**, **Eduardo Marcon** e **Julio Bassanesi**.
+**Feito por Giovani Broliatto**, com contribuições de Eduardo Marcon e Julio Bassanesi, como projeto em equipe na UCS. O redesign de 2026 e a busca com IA são trabalho meu.
 
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-giobroliatto-0A66C2?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giobroliatto/)
