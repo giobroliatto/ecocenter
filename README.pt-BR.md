@@ -13,6 +13,8 @@
 ![JWT](https://img.shields.io/badge/JWT-000000?logo=jsonwebtokens&logoColor=white)
 ![Claude API](https://img.shields.io/badge/Claude_API-D97757?logo=anthropic&logoColor=white)
 
+[![Licença MIT](https://img.shields.io/badge/licen%C3%A7a-MIT-green)](LICENSE)
+
 </div>
 
 [English](README.md) · **Português**
@@ -110,6 +112,12 @@ frontend/src/
 │                    # ResiduesForm, SchedulePicker, UserProfile...
 └── imgs/
 ```
+
+---
+
+## Licença
+
+[MIT](LICENSE)
 
 ---
 
